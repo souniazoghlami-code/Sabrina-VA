@@ -535,7 +535,34 @@ section {
   margin-bottom: 22px;
 }
 
-.contact-box p {
+.contact {
+  position: relative;
+  background:
+    linear-gradient(
+      to right,
+      #e8e2d7 0%,
+      rgba(232,226,215,0.92) 45%,
+      rgba(232,226,215,0.55) 72%,
+      rgba(232,226,215,0.25) 100%
+    ),
+    url("scene.png") center / cover no-repeat;
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, #e8e2d7 0%, rgba(232,226,215,0) 22%, rgba(232,226,215,0) 78%, #e8e2d7 100%);
+  pointer-events: none;
+}
+
+.contact .container {
+  position: relative;
+  z-index: 2;
+}.contact-box p {
   font-size: 16px;
   max-width: 560px;
   margin-bottom: 28px;
